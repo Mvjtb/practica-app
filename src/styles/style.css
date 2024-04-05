@@ -1,0 +1,1883 @@
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Montserrat Alternates", sans-serif;
+    
+  
+  }
+  
+  
+  
+  button.normal{ /*modificacion de un boton*/
+  
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #FFFFFF;
+    background-color: #088178;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+  
+  }
+  
+  
+  
+  /* 
+    ================Personalizado del Scrollbar ==============
+  */
+  body{
+    overflow-x: hidden;
+  }
+  /* estilo de la barra de scroll */
+  ::-webkit-scrollbar{
+    width: 15px;
+    height: 80px;
+    max-height: fit-content;
+  }
+  
+  /* estilo barra de desplazamiento */
+  ::-webkit-scrollbar-track-piece{
+    background: #8dd7d2;
+  }
+  
+  /* estilo del deslizador */
+  ::-webkit-scrollbar-thumb{
+    width: 10px;
+    border-radius: 5px;
+    background-clip: padding-box;
+    background: linear-gradient(#49beb7,#085f63,#8dd7d2);
+  }
+  
+  
+  /*--------------------------------------------------------------
+  # Content (top-navbar - Header)
+  --------------------------------------------------------------*/
+  
+  /* <!-- ======= Top barra de navegacion ======= --> */
+  
+  .top-navbar{
+  
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  
+  }
+  
+  .icon i{
+  
+    color: #085f63;
+    padding-left: 4px;
+    cursor: pointer;
+    font-size: 30px;
+    
+  }
+  
+  .icon i:hover,
+  .icon a:hover{
+  
+    color: #8dd7d2;
+  
+  }
+  
+  
+  .login-register {
+    display: flex;
+    align-items: center; /* Esto alinea verticalmente los elementos */
+  }
+  
+  .login-register p{
+    margin: 0; /* Esto elimina cualquier margen predeterminado */
+    margin-right: 10px; /* Esto agrega un pequeño margen entre el párrafo y el enlace */
+    font-size: 14px; /* Tamaño de letra */
+    font-weight: 600;
+  }
+  
+  .login-register a {
+  
+    margin: 0; /* Esto elimina cualquier margen predeterminado */
+    margin-right: 10px; /* Esto agrega un pequeño margen entre el párrafo y el enlace */
+    font-size: 21px; /* Tamaño de letra */
+    color: #085f63;
+    font-weight: bold;
+  
+    text-decoration: none;
+  }
+  
+  .login-register a:hover{
+  
+    color: #8dd7d2;
+  
+  }
+  
+  .logo {
+    width: 100%;
+    margin-left: -70px; 
+  }
+  
+  /* <!-- ======= barra de navegacion ======= --> */
+  
+  
+  #header {
+  
+    width: 100%;
+    height: 120px;
+    border-radius: 10px 10px 10px 10px;
+    border: 3px solid #085f63;
+  
+  
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+    
+  }
+  
+  #navbar{
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: -60px;
+    
+  
+  }
+  
+  #navbar li{
+  
+    list-style: none;
+    padding: 0 19px;
+    position: relative;
+  
+  }
+  
+  
+  #navbar li a {
+  
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color:#085f63;
+  
+  }
+  
+  #navbar li a:hover,
+  #navbar li a.active{
+  
+    color: #8dd7d2;
+  
+  }
+  
+  #navbar li a.active::after,
+  #navbar li a:hover::after{
+  
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #8dd7d2;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+  
+  }
+  
+  #header button.normal{ /*modificacion de un boton*/
+  
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #FFFFFF;
+    background-color:#085F63;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+  
+  }
+  
+  
+  #header button:hover{
+  
+    background-color: #088178;
+    color: black;
+  
+  }
+  
+  #mobile{
+  
+    display: none;
+    align-items: center;
+  
+  }
+  
+  #close{
+  
+    display: none;
+  
+  }
+  
+  
+  
+  .content {/*Fondo para la primera seccion*/
+    
+    background-image: url("../img/Header/h2.png");
+    
+    padding: 0px 20px;
+    background-size: cover;
+    background-position: top 25% right 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+  
+  
+  /*--------------------------------------------------------------
+  # Slider
+  --------------------------------------------------------------*/
+  
+  /*Caracteristicas de las imagenes del slider*/
+  .carousel-item img {
+    width: 100%; /* Define el ancho deseado */
+    height: 70vh; /* Define la altura deseada */
+    background-size: cover;
+    background-position: top 25% right 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    /*object-fit: cover;  Escala la imagen para que cubra todo el espacio disponible sin deformarla */
+  }
+  
+  /*Con esto volvemos circulos los botones de slider de abajo*/
+  .carousel .carousel-indicators button{
+  
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+  
+  }
+  
+  /*Con esto volvemos circulos los botones de slider de los lados prev-izquierda next-derecha*/
+  .carousel-control-prev{
+    background-color: #085f63;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    opacity: 0.8;
+    top: 50%; /* Posiciona los botones verticalmente en el centro */
+    transform: translateY(-50%); /* Ajusta la posición vertical */
+    left: 10px;
+  }
+  
+  .carousel-control-next {
+    background-color: #085f63;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    opacity: 0.8;
+    top: 50%; /* Posiciona los botones verticalmente en el centro */
+    transform: translateY(-50%); /* Ajusta la posición vertical */
+    right: 10px;
+  }
+  
+  
+  /*--------------------------------------------------------------
+  # Services 
+  --------------------------------------------------------------*/
+  
+  
+  
+  #Services{
+    
+    text-align: center;
+  
+  }
+  
+  
+  #Services h2 {
+  
+    margin-top: 68px;
+    color: #085f63;
+    background-color: #8DD7D2;
+    font-size: 42px;
+    font-weight: bold;
+  
+  }
+  
+  #Services .principal-text {
+  
+    color: #085f63;
+    font-size: 32px;
+  
+  }
+  
+  
+  /* Estilos para las Cards */
+  
+  /* estilo de contenedor */
+  #Services .container-card{
+    /* padding:0 10px; */
+    margin: 0;
+    width: 100%;
+    display:flexbox;
+    position:-webkit-sticky;
+  }
+  
+  /* estilo de tarjetas */
+  .container-card .card{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /* height: 440px; */
+    border-radius: 0px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;        
+  }
+  /* nota: se le quito el alto para eliminar el problema de espaciado vertical */
+  
+  /* estilo de imagenes */
+  .card-img-fluid{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card .frontface img{
+    /* opacity: 75%; */
+    margin: 0;
+    width: 100%;
+    /* height: 60vh; */
+    position: relative;
+  }
+  
+  /* estilo del texto para la clase frontface */
+  .card .frontface .textfront {
+    position:absolute;
+    justify-content: left;
+    bottom: 45%;
+    margin-left: 20px;
+    font-size: clamp(.7rem, 1vw + .25rem, 1,75rem);
+    color: #085F63;
+    text-shadow: 1px 3px #22222241;
+   }
+  
+  /* body de cards  */
+  .card-body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  top: 0;
+  right: -350%;
+  position: absolute;
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.1s;
+  }
+  
+  /* body de card oscuras */
+  .bodydark{
+    background: #49beb6ab;
+  }
+  /* body de cards blancas */
+  .bodysoft{
+  background: #ffffffbd;
+  }
+  
+  /* efecto hover de las cards celestes */
+  .card:hover .card-body{
+  right: 0;
+  }
+  
+  
+  /* titulo de las cards */
+  .card .card-title {
+  text-align: center;
+  /* text-transform: uppercase; */
+  margin-bottom: 1.7rem;
+  font-size: clamp(1rem, 1.5vw + .25rem, 1,85rem);
+  font-weight: 500;
+  color: #085f63;
+  text-shadow: 3px 3px #22222241;
+  }
+  
+  /* texto de las cards */
+  .card .card-info{
+  text-align: center;
+  font-size: clamp(1rem, 1.5vw + .1rem ,1.6rem);
+  /* line-height: 25px; */
+  margin: 15px 0;
+  font-weight: 400;
+  }
+  
+  /* color de texto blanco de las cards */
+  .textwhite {
+    color: #ffffff;
+  }
+  
+  /* color de texto turquesa claro de las cards  */
+  .textturq {
+    color:#49beb7;
+    }
+  
+  
+  /*--------------------------------------------------------------
+  # News
+  --------------------------------------------------------------*/
+  
+  #news{
+  
+    text-align: center;
+  }
+  
+  #news .linea-separadora{
+  
+    border-bottom: 2px solid #085F63; /* Grosor y color del borde */
+    margin: 20px auto; /* Margen para centrar la línea horizontalmente */
+    width: 97%;
+    
+  }
+  
+  #news h2{
+  
+    margin-top: 68px;
+    color: #085f63;
+    background-color: #8DD7D2;
+    font-size: 42px;
+    font-weight: bold;
+  }
+  
+  
+  
+  #news-hero {
+  
+    background-image: url("../img/News/n1.png");
+    height: 100vh; 
+    width: 100%;
+    background-size: cover;
+    margin-top: 32px;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    
+  }
+  
+  
+  #news-hero p{
+  
+    color: #085F63;
+    font-size: 35px;
+    text-align: center; 
+    text-justify: inter-word; 
+    font-weight: bold;
+    animation-duration: 5s;
+    animation-name: slidein;  /*  Animacion  */
+    animation-play-state: paused; /*  Animacion  */
+  
+  }
+  
+  #news-hero p.visible {
+    animation-play-state: running;  /*  Animacion  */
+  }
+  
+  
+  #news-hero button{
+  
+    font-size: 20px;
+    font-weight: 600;
+    padding: 15px 100px;
+    color: #FFFFFF;
+    background-color: #085F63;
+    border-radius: 25px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+    font-weight: bold;
+    margin-right: 70px;
+  
+  }
+  
+  
+  
+  
+  
+  .linea-separadora{
+  
+    border-bottom: 2px solid #085F63; /* Grosor y color del borde */
+    margin: 40px auto; /* Margen para centrar la línea horizontalmente */
+    width: 97%;
+    
+  }
+  
+  
+  /*--------------------------------------------------------------
+  # footer
+  --------------------------------------------------------------*/
+  
+  footer{
+  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 40px;
+  
+  }
+  
+  footer .colum{
+  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  
+  }
+  
+  footer .logo{
+  
+    margin-bottom: 15px;
+    width: 263px;
+    height: 50px;
+    margin-left: 0px; 
+  
+  }
+  
+  footer .msg p{
+  
+    font-size: 14px;
+    width: 360px;
+    height: 110px;
+    border-radius: 25px;
+    border: 3px solid #8DD7D2;
+    background-color: #8DD7D2;
+    padding-left: 12px;
+    padding-top: 16px;
+    font-weight: 500;
+    justify-content: center;
+  }
+  
+  footer .msgc p{
+  
+    font-size: 12px;
+    text-decoration: none;
+    color: #222;
+    margin: 0px 0px 0px 15px;
+    font-weight: bold;
+  
+  }
+  
+  footer .msgc a{
+  
+    font-size: 18px;
+    text-decoration: none;
+    color: #49BEB7;
+    margin-bottom: 10px;
+    font-weight: bold;
+    
+  }
+  
+  footer .msgc .title-footer{
+  
+    font-size: 18px;
+    text-decoration: none;
+    color: #49BEB7;
+    
+    font-weight: bold;
+    
+  }
+  
+  
+  footer .msgc h3{
+  
+    margin-top: -40px;
+    margin-bottom: 0;
+    color: #085F63;
+    font-weight: bold;
+    font-size: 25px;
+  
+  }
+  
+  
+  footer .follow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    width: 348px;
+    height: 113px;
+    border-radius: 25px;
+    border: 3px solid #8DD7D2;
+    background-color: #8DD7D2;
+    font-weight: bold;
+  }
+  
+  footer .follow i {
+    margin-top: 20px;
+    font-size: 55px; 
+    color: #085f63;
+    padding-left: 4px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  footer .follow p {
+  
+    margin-top: 5px;
+    font-size: 20px; 
+    color: #085F63;
+    font-weight: bold;
+  }
+  
+  
+  footer .team{
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+  
+  }
+  
+  footer .team h4{
+  
+    color: #085F63;
+    font-weight: bold;
+  }
+  
+  
+  footer .team p{
+  
+    color: #085F63;
+    margin: 0;
+  }
+  
+  
+  footer .copyright{
+  
+    width: 100%;
+    text-align: center;
+    color: #085F63;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 50%;
+  
+  }
+  
+  
+  /*--------------------------------------------------------------
+  # masinformacion.html 
+  --------------------------------------------------------------*/
+  
+  .content-information {
+    background-color: #ffffff;
+    padding: 0px 20px;
+    background-size: cover;
+    background-position: top 25% right 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+    
+  #information {
+  
+    background-image: url("../img/Information/i1.png");
+    height: 500px; 
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    
+  }
+  
+  
+  #information .lecture{
+  
+    color: #085F63;
+    font-size: 35px;
+    text-align: center; 
+    text-justify: inter-word; 
+    font-weight: bold;
+  
+  }
+  
+  #information .inscription{
+  
+    color: #085F63;
+    font-size: 20px;
+    text-align: center; 
+    text-justify: inter-word; 
+    font-weight: 600;
+  
+  }
+  
+  
+  
+  /*--------------------------------------------------------------
+  # login.html 
+  --------------------------------------------------------------*/
+  .top-navbar-online-banking{
+  
+    display: flex;
+    margin-top: 15px;
+    align-items: center; /* Alinea verticalmente con el ícono y el texto */
+  
+  }
+  
+  .icon-online-banking i{
+  
+    color: #085f63;
+    padding-left: 4px;
+    cursor: pointer;
+    font-size: 30px;
+    vertical-align: middle;
+  }
+  
+  .icon-online-banking i:hover,
+  .icon-online-banking a:hover{
+  
+    color: #8dd7d2;
+  
+  }
+  
+  /*---top navbar login---*/
+  
+  .top-navbar-online-banking a {
+    color: #085f63; /* Color del texto */
+    font-size: 18px; /* Tamaño del texto */
+    text-decoration: none; 
+    font-weight: 600;
+  }
+  
+  .top-navbar-online-banking a:hover {
+    color: #8dd7d2;
+  }
+  
+  /*---navbar login---*/
+  
+  #header-online-banking {
+  
+    width: 100%;
+    height: 120px;
+    border-radius: 10px 10px 10px 10px;
+    border: 3px solid #085f63;
+  
+  
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background:linear-gradient(90deg in oklab, #FFFFFF,#49beb7, #085F63);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+    
+  }
+  
+  #navbar-online-banking{
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: -60px;
+    
+  
+  }
+  
+  #navbar-online-banking li{
+  
+    list-style: none;
+    padding: 0 19px;
+    position: relative;
+  
+  }
+  
+  
+  #navbar-online-banking li a {
+  
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color:#ffffff;
+  
+  }
+  
+  #navbar-online-banking li a:hover,
+  #navbar-online-banking li a.active{
+  
+    color: #49BEB7;
+  
+  }
+  
+  #navbar-online-banking li a.active::after,
+  #navbar-online-banking li a:hover::after{
+  
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #8dd7d2;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+  
+  }
+  
+  
+  #header-online-banking button.normal{ /*modificacion de un boton*/
+  
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #FFFFFF;
+    background-color:#085F63;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+  
+  }
+  
+  
+  #header-online-banking button:hover{
+  
+    background-color: #088178;
+    color: black;
+  
+  }
+  
+  #mobile-online-banking{
+  
+    display: none;
+    align-items: center;
+  
+  }
+  
+  #close-online-banking{
+  
+    display: none;
+  
+  }
+  
+  #login {
+    
+    background-image: url("../img/Login/l1.png");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center 100px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  #login-section {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+  
+  }
+  
+  .login-container {
+    background-color: rgba(73, 190, 183, 0.4);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #login-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #login-form label {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #085f63;
+    font-weight: bold;  
+  }
+  
+  #login-form input {
+    padding: 4px;
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid #085F63;
+    border-radius: 50px;
+    font-size: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    padding-left: 15px;
+  }
+  
+  #login-form button {
+    background-color: #085f63;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px;  
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 25px;
+    width: 200px;
+    margin: 50px auto 0; 
+    display: flex; /* Hace que el botón sea un contenedor flexible */
+    align-items: center; /* Centra verticalmente el contenido del botón */
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    gap: 10px;
+  }
+  
+  #login-form button i {
+    margin-right: 5px; /* Espacio entre el ícono y el texto "Ingresar" */
+  }
+  
+  #login-form button:hover {
+    background-color: #088178;
+    
+  }
+  
+  .password-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  #togglePassword {
+    position: absolute;
+    top: 50%;
+    right: 15px; /* O la distancia que desees del borde derecho del campo de contraseña */
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #085F63;
+    font-size: 20px;
+  }
+  
+  #togglePassword2 {
+    position: absolute;
+    top: 50%;
+    right: 15px; /* O la distancia que desees del borde derecho del campo de contraseña */
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #085F63;
+    font-size: 20px;
+  }
+  
+  #login-register-container {
+    margin-top: 25px; /* Ajusta el margen superior según sea necesario */
+  }
+  
+  /*--------------------------------------------------------------
+  # register.html 
+  --------------------------------------------------------------*/
+  #register {
+    
+    background-image: url("../img/Register/r1.png");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center 100px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  #register-section {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    /* margenes para el contenedor de registro */
+    padding: 0 20px;
+    
+  }
+  
+  .register-container {
+    background-color: rgba(73, 190, 183, 0.4);
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+    max-width: 670px;
+    width: 100%;
+    padding: 30px;
+    padding-top: 50px;
+  }
+  
+  .register-form .input-box{
+  
+    width: 100%;
+    margin-top: 5px;
+  
+  }
+  
+  .input-box label{
+  
+    color: #085F63;
+    font-weight: bold;
+    font-size: 20px;
+  
+  }
+  
+  .register-form .input-box input {
+  
+    position: relative;
+    height: 37px;
+    width: 100%;
+    outline: none;
+    padding: 0 15px;
+  
+    border: 1px solid #085F63;
+    border-radius: 50px;
+    font-size: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    margin-top: 5px;
+  
+  }
+  
+  .register-form .column{
+  
+    display: flex;
+    column-gap: 15px;
+  }
+  
+  .register-form .input-box #input-cedula{
+  
+    width: 275px;
+  }
+  
+  .register-form .input-box #input-fechan{
+  
+    width: 189px;
+  }
+  
+  
+  
+  .register-form .box-t{
+  
+    width: 100%;
+    margin-top: 5px;
+  
+  }
+  
+  .box-t label{
+  
+    color: #085F63;
+    font-weight: bold;
+    font-size: 20px;
+  
+  }
+  
+  .register-form .box-t input {
+  
+    display:flex;
+    flex-direction: column;
+    height: 37px;
+    width: 100%;
+    outline: none;
+    padding: 0 15px;
+  
+    border: 1px solid #085F63;
+    border-radius: 50px;
+    font-size: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    margin-top: 5px;
+  
+  }
+  
+  .register-form .box-t #input-telefono{
+  
+    width: 275px;
+  }
+  
+  .register-form button{
+  
+    background-color: #085f63;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px;  
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 30px;
+    width: 398px;
+    margin: 50px auto 0; 
+    display: flex; /* Hace que el botón sea un contenedor flexible */
+    align-items: center; /* Centra verticalmente el contenido del botón */
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  
+    /* separacion entre el icono y las letras*/
+    gap: 20px;
+  }
+  
+  
+  .register-form button:hover {
+    background-color: #088178;
+    
+  }
+  
+  
+  .cuenta-login {
+    display: flex;
+    align-items: center; /* Esto alinea verticalmente los elementos */
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .cuenta-login p{
+    margin: 0; /* Esto elimina cualquier margen predeterminado */
+    margin-right: 10px; /* Esto agrega un pequeño margen entre el párrafo y el enlace */
+    font-size: 14px; /* Tamaño de letra */
+    font-weight: 600;
+  }
+  
+  .cuenta-login a {
+  
+    margin: 0; /* Esto elimina cualquier margen predeterminado */
+    margin-right: 10px; /* Esto agrega un pequeño margen entre el párrafo y el enlace */
+    font-size: 21px; /* Tamaño de letra */
+    color: #085f63;
+    font-weight: bold;
+  
+    text-decoration: none;
+  }
+  
+  .cuenta-login a:hover{
+  
+    color: #8dd7d2;
+  
+  }
+  
+  
+  
+  /* Cambia el color, el tamaño de fuente y el fondo del placeholder */
+  input[type="text"]::placeholder {
+    color: #085F63;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  
+  /* Cambia el color, el tamaño de fuente y el fondo del placeholder */
+  input[type="tel"]::placeholder {
+    color: #085F63;
+    font-size: 20px;
+    font-weight: bold;
+    
+  }
+  
+  
+  .password-register{
+  
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-top: 5px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .cursor{
+  
+    position:fixed;
+    width: 45px;
+    height: 45px;
+    border: 1px solid #088178;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: 0.1s;
+    z-index: 9999;
+  
+  }
+  
+  .cursor2{
+  
+    position:fixed;
+    width: 8px;
+    height: 8px;
+    background-color: #088178;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: 0.15s;
+    z-index: 9999;
+  
+  }
+  
+  .content:hover ~ .cursor {
+    
+    width: 47px;
+    height: 47px;
+  
+  }
+  
+  .content:hover ~ .cursor2 {
+  
+    transform: translate(-50%, -50%) scale(2.5);
+  
+  }
+  
+  
+  .content-information:hover ~ .cursor {
+  
+    width: 47px;
+    height: 47px;
+  
+  }
+  
+  .content-information:hover ~ .cursor2 {
+  
+    transform: translate(-50%, -50%) scale(2.5);
+  
+  }
+  
+  
+  /*--------------------------------------------------------------
+  # keyframes ANIMACIONES ************************************
+  --------------------------------------------------------------*/
+  /*
+  @keyframes slidein {
+    from {
+      transform: translateX(100%);
+    }
+  
+    to {
+      transform: translateX(0%);
+    }
+  }
+  */
+  
+  /*
+  # Animacion blur del navbar
+  */
+  .blur-in{animation:blur-in 0.8s linear both} @keyframes blur-in{0%{filter:blur(12px);opacity:0}100%{filter:blur(0);opacity:1}} 
+  
+  
+  /*--------------------------------------------------------------
+  # Media Query (responsive) ************************************
+  --------------------------------------------------------------*/
+  
+  
+  @media (max-width:1150px){
+  
+    /*--------------------------------------------------------------
+    # Top barra de navegacion
+    --------------------------------------------------------------*/
+  
+  
+    .top-navbar a {
+  
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      color:#085f63;
+    
+    }
+  
+    .top-navbar i {
+  
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+      color:#085f63;
+    
+    }
+  
+    .login-register p{
+      margin: 0; 
+      margin-right: 10px; 
+      font-size: 12px; 
+      
+    }
+  
+  
+    /*--------------------------------------------------------------
+    # Barra de navegacion
+    --------------------------------------------------------------*/
+    
+    #navbar {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      position: fixed;
+      top: 0;
+      right: -300px;
+      height: 100vh;
+      width: 320px;
+      background-color: #e3e6f3;
+      box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+      padding: 80px 0 0 10px;
+      transition: 0.3s;
+  
+    }
+  
+    /* esto es para hacer el boton en la barra responsiva */
+    #navbar.active{
+  
+      right:0px;
+  
+    }
+    
+    #navbar li{
+  
+      margin-bottom: 25px;
+  
+    }
+  
+    #mobile{
+  
+      display: flex;
+      align-items: center;
+    
+    }
+  
+    #mobile i{
+  
+      color: #085f63;
+      font-size: 24px;
+      padding-left: 24px;
+  
+    }
+    
+    #close{
+  
+      display: initial;
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      color: #085f63;
+      font-size: 24px;
+    }
+  
+    .carousel-item img {
+      width: 100%; /* Define el ancho deseado */
+      height: 60vh; /* Define la altura deseada */
+      background-size: cover;
+      background-position: top 25% right 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      /*object-fit: cover;  Escala la imagen para que cubra todo el espacio disponible sin deformarla */
+    }
+  
+  
+    /*--------------------------------------------------------------
+    # News-Hero
+    --------------------------------------------------------------*/
+  
+  
+  
+    #news-hero {
+      background-image: url("../img/News/n1.png");
+      height: 70vh;
+      width: 100%;
+      background-size: cover;
+      margin-top: 32px;
+      margin-left: 5px;
+      padding: 0px 5%; /* Ajuste para que el contenido no se desborde en pantallas pequeñas */
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Centra verticalmente */
+      justify-content: center;
+    }
+    
+    #news-hero p {
+      color: #085F63;
+      font-size: 4vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+      text-align: center;
+      text-justify: inter-word;
+      margin-bottom: 20px; /* Espacio entre el párrafo y el botón */
+      font-weight: bold;
+    }
+  
+    #news-hero button {
+      font-size: 3vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+      font-weight: bold;
+      padding: 15px 30px;
+      color: #FFFFFF;
+      background-color: #085F63;
+      border-radius: 25px;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      transition: 0.2s;
+      margin-right: 0;
+    }
+    
+  /*--------------------------------------------------------------
+  # Responsive para masinformacion.html 
+  --------------------------------------------------------------*/
+  
+  #information {
+    background-image: url("../img/Information/i1.png");
+    height: 70vh;
+    width: 100%;
+    background-size: contain;
+    margin-top: 32px;
+    margin-left: 5px;
+    padding: 0px 5%; /* Ajuste para que el contenido no se desborde en pantallas pequeñas */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center;
+  }
+  
+  #information .lecture {
+    color: #085F63;
+    font-size: 4vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+    text-align: center;
+    text-justify: inter-word;
+    margin-bottom: 20px; /* Espacio entre el párrafo y el botón */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #ffffff;
+  
+  }
+  
+  #information .inscription {
+    color: #085F63;
+    font-size: 3vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+    text-align: center;
+    text-justify: inter-word;
+    margin-bottom: 20px; /* Espacio entre el párrafo y el botón */
+    text-shadow: 2px 2px 4px #ffffff;
+  }
+  
+  
+    
+    /*--------------------------------------------------------------
+  # login.html 
+  --------------------------------------------------------------*/
+  
+  
+  #navbar-online-banking {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 320px;
+    background-color: #e3e6f3;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 80px 0 0 10px;
+    transition: 0.3s;
+  
+  }
+  
+  #navbar-online-banking li a {
+  
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color:#085F63;
+  
+  }
+  
+  #navbar-online-banking li{
+  
+    margin-bottom: 25px;
+  
+  }
+  
+  /* esto es para hacer el boton en la barra responsiva */
+  #navbar-online-banking.active{
+  
+    right:0px;
+  
+  }
+  
+  #mobile-online-banking{
+  
+    display: flex;
+    align-items: center;
+  
+  }
+  
+  #mobile-online-banking i{
+  
+    color: #ffffff;
+    font-size: 24px;
+    padding-left: 24px;
+  
+  }
+  
+  #close-online-banking{
+  
+    display: initial;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #085f63;
+    font-size: 24px;
+  }
+  
+  #login {
+    
+    background-image: url("../img/Login/l1.png");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  
+  
+  
+  /*--------------------------------------------------------------
+  # desactivar efecto mouse
+  --------------------------------------------------------------*/
+  
+  
+  .cursor{
+  
+    position:fixed;
+    width: 0px;
+    height: 0px;
+    border: 0px solid #088178;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: 0.1s;
+    z-index: 9999;
+  
+  }
+  
+  .cursor2{
+  
+    position:fixed;
+    width: 0px;
+    height: 0px;
+    background-color: #088178;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: 0.15s;
+    z-index: 9999;
+  
+  }
+  
+  .content:hover ~ .cursor {
+    
+    width: 0px;
+    height: 0px;
+  
+  }
+  
+  .content:hover ~ .cursor2 {
+  
+    transform: translate(-50%, -50%) scale(2.5);
+  
+  }
+  
+  
+  }
+  
+  
+  @media (max-width:799px){
+  
+    .carousel-item img {
+      width: 100%; /* Define el ancho deseado */
+      height: 40vh; /* Define la altura deseada */
+      background-size: cover;
+      background-position: top 25% right 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      /*object-fit: cover;  Escala la imagen para que cubra todo el espacio disponible sin deformarla */
+    }
+  
+  
+  
+    footer .colum {
+      width: 100%; /* Usa el ancho completo para dispositivos pequeños */
+    }
+  
+    footer .msg p {
+      width: 100%; /* Usa el ancho completo para dispositivos pequeños */
+    }
+  
+    footer .msgc {
+      width: 100%; /* Usa el ancho completo para dispositivos pequeños */
+    }
+  
+    footer .follow {
+      width: 100%; /* Usa el ancho completo para dispositivos pequeños */
+    }
+  
+    footer .team {
+      width: 100%; /* Usa el ancho completo para dispositivos pequeños */
+    }
+  
+    footer .msgc{
+  
+      margin-top: 15px;
+      
+    }
+  
+    
+  
+  
+    /*--------------------------------------------------------------
+  # Responsive para masinformacion.html parrafos
+  --------------------------------------------------------------*/
+    #information .lecture {
+      color: #085F63;
+      font-size: 4vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+      text-align: center;
+      text-justify: inter-word;
+      margin-bottom: 20px; /* Espacio entre el párrafo y el botón */
+      font-weight: bold;
+      text-shadow: 2px 2px 4px #ffffff;
+      margin-top: -80px; 
+  
+    } 
+  
+  
+    .top-navbar a {
+  
+      text-decoration: none;
+      font-size: 10px;
+      font-weight: bold;
+      color:#085f63;
+    
+    }
+  
+    .top-navbar i {
+  
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      color:#085f63;
+    
+    }
+  
+    .top-navbar p {
+  
+      font-size: 10px;
+      
+    
+    }
+    
+  
+  }
+  
+  /* Responsive personalizado para cards de servicios */
+  @media (min-width:721px) and (max-width:1100px){
+    .container-card .card .frontface .textfront{
+      font-size: 18px;
+    } 
+  }
+  
+  @media (min-width:575px) and (max-width:720px){
+    
+    .container-card .card .frontface .textfront{
+      font-size: 12px;
+    } 
+    .card-body .card-title .card-info{
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .card .card-body .card-title {
+      font-size: 16px;
+    }
+  
+    .card .card-body .card-info {
+      font-size: clamp(0.8rem, .9vw + .2rem ,1.2rem);
+    }
+  }
+  
+  
+  /* Responsive personalizado para el register */
+  @media screen and (max-width:630px) {
+    
+    .register-form .input-box #input-cedula{
+  
+      width: 100%;
+    }
+  
+    .register-form .input-box #input-fechan{
+  
+      width: 100%;
+    }
+  
+    .register-form .box-t #input-telefono{
+  
+      width: 100%;
+    }
+  
+    .register-form .column{
+  
+      flex-wrap: wrap;
+    }
+  
+  
+    #register-section {
+  
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    
+      /* margenes para el contenedor de registro */
+      padding: 0 20px;
+      
+    }
+  
+  
+    .register-form button{
+  
+      background-color: #085f63;
+      color: #ffffff;
+      font-weight: bold;
+      padding: 10px;  
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 30px;
+      width: 100%;
+      margin: 50px auto 0; 
+      display: flex; /* Hace que el botón sea un contenedor flexible */
+      align-items: center; /* Centra verticalmente el contenido del botón */
+      justify-content: center;
+    
+      /* separacion entre el icono y las letras*/
+      gap: 20px;
+    }
+  }
+  
+  
+  @media (max-width: 499px){
+  
+    .login-register p{
+      margin: 0; /* Esto elimina cualquier margen predeterminado */
+      margin-right: 10px; /* Esto agrega un pequeño margen entre el párrafo y el enlace */
+      font-size: 10px; /* Tamaño de letra */
+      font-weight: 600;
+    }
+    
+    .login-register a {
+    
+      margin: 0; /* Esto elimina cualquier margen predeterminado */
+      margin-right: 10px; /* Esto agrega un pequeño margen entre el párrafo y el enlace */
+      font-size: 11px; /* Tamaño de letra */
+      color: #085f63;
+      font-weight: bold;
+    
+      text-decoration: none;
+    }
+  
+    
+    .cuenta-login p{
+      margin: 0; /* Esto elimina cualquier margen predeterminado */
+      margin-right: 10px; /* Esto agrega un pequeño margen entre el párrafo y el enlace */
+      font-size: 13px; /* Tamaño de letra */
+      font-weight: 600;
+    }
+    
+    .cuenta-login a {
+    
+      margin: 0; /* Esto elimina cualquier margen predeterminado */
+      margin-right: 10px; /* Esto agrega un pequeño margen entre el párrafo y el enlace */
+      font-size: 15px; /* Tamaño de letra */
+      color: #085f63;
+      font-weight: bold;
+    
+      text-decoration: none;
+    }
+  
+    /*--------------------------------------------------------------
+  # Responsive para masinformacion.html en 499px
+  --------------------------------------------------------------*/
+  
+  .content-information {
+    padding: 0px 5px; /* Ajustar el relleno */
+  }
+  
+  #information {
+    height: auto; /* Hacer la altura automática */
+    background-size: 85%; /* Ajustar el tamaño de fondo */
+    align-items: center; /* Centrar elementos */
+    text-align: center; /* Centrar texto */
+    background-position: center center;
+  }
+  
+  #information .lecture {
+    font-size: 20px; /* Ajustar el tamaño de la fuente */
+    margin-top: 14px;
+  }
+  
+  #information .inscription {
+    font-size: 14px; /* Ajustar el tamaño de la fuente */
+    margin-top: 11px;
+  }
+  
+  
+  }

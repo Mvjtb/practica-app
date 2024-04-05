@@ -1,0 +1,276 @@
+/*--------------------------------------------------------------
+# login.html 
+--------------------------------------------------------------*/
+
+.content-information {
+    background-color: #ffffff;
+    padding: 0px 20px;
+    background-size: cover;
+    background-position: top 25% right 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .logo {
+    width: 100%;
+    margin-left: -70px; 
+  }
+  
+
+.top-navbar-online-banking{
+
+    display: flex;
+    margin-top: 15px;
+    align-items: center; /* Alinea verticalmente con el ícono y el texto */
+  
+  }
+  
+  .icon-online-banking i{
+  
+    color: #085f63;
+    padding-left: 4px;
+    cursor: pointer;
+    font-size: 30px;
+    vertical-align: middle;
+  }
+  
+  .icon-online-banking i:hover,
+  .icon-online-banking a:hover{
+  
+    color: #8dd7d2;
+  
+  }
+  
+  /*---top navbar login---*/
+  
+  .top-navbar-online-banking a {
+    color: #085f63; /* Color del texto */
+    font-size: 18px; /* Tamaño del texto */
+    text-decoration: none; 
+    font-weight: 600;
+  }
+  
+  .top-navbar-online-banking a:hover {
+    color: #8dd7d2;
+  }
+  
+  /*---navbar login---*/
+  
+  #header-online-banking {
+  
+    width: 100%;
+    height: 120px;
+    border-radius: 10px 10px 10px 10px;
+    border: 3px solid #085f63;
+  
+  
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background:linear-gradient(90deg in oklab, #FFFFFF,#49beb7, #085F63);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+    
+  }
+  
+  #navbar-online-banking{
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: -60px;
+    
+  
+  }
+  
+  #navbar-online-banking li{
+  
+    list-style: none;
+    padding: 0 19px;
+    position: relative;
+  
+  }
+  
+  
+  #navbar-online-banking li a {
+  
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color:#ffffff;
+  
+  }
+  
+  #navbar-online-banking li a:hover,
+  #navbar-online-banking li a.active{
+  
+    color: #49BEB7;
+  
+  }
+  
+  #navbar-online-banking li a.active::after,
+  #navbar-online-banking li a:hover::after{
+  
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #8dd7d2;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+  
+  }
+  
+  
+  #header-online-banking button.normal{ /*modificacion de un boton*/
+  
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #FFFFFF;
+    background-color:#085F63;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+  
+  }
+  
+  
+  #header-online-banking button:hover{
+  
+    background-color: #088178;
+    color: black;
+  
+  }
+  
+  #mobile-online-banking{
+  
+    display: none;
+    align-items: center;
+  
+  }
+  
+  #close-online-banking{
+  
+    display: none;
+  
+  }
+  
+  #login {
+    
+    background-image: url("../img/Login/l1.png");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center 100px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  #login-section {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+  
+  }
+  
+  .login-container {
+    background-color: rgba(73, 190, 183, 0.4);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #login-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #login-form label {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #085f63;
+    font-weight: bold;  
+  }
+  
+  #login-form input {
+    padding: 4px;
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid #085F63;
+    border-radius: 50px;
+    font-size: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    padding-left: 15px;
+  }
+  
+  #login-form button {
+    background-color: #085f63;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px;  
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 25px;
+    width: 200px;
+    margin: 50px auto 0; 
+    display: flex; /* Hace que el botón sea un contenedor flexible */
+    align-items: center; /* Centra verticalmente el contenido del botón */
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    gap: 10px;
+  }
+  
+  #login-form button i {
+    margin-right: 5px; /* Espacio entre el ícono y el texto "Ingresar" */
+  }
+  
+  #login-form button:hover {
+    background-color: #088178;
+    
+  }
+  
+  .password-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  #togglePassword {
+    position: absolute;
+    top: 50%;
+    right: 15px; /* O la distancia que desees del borde derecho del campo de contraseña */
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #085F63;
+    font-size: 20px;
+  }
+  
+  #togglePassword2 {
+    position: absolute;
+    top: 50%;
+    right: 15px; /* O la distancia que desees del borde derecho del campo de contraseña */
+    transform: translateY
+  }  
+
+  
+footer .copyright{
+
+    width: 100%;
+    text-align: center;
+    color: #085F63;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 50%;
+  
+  }
